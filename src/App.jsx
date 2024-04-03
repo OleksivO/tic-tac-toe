@@ -6,7 +6,7 @@ import GameOver from './components/GameOver.jsx';
 import { WINNING_COMBINATIONS } from './combinations.js';
 
 const PLAYERS = {
-  X: 'Player 1',
+  X: 'Me',
   O: 'Player 2'
 };
 
@@ -103,6 +103,7 @@ function App() {
         <ol id="players" className="highlight-player">
           <Player
             initialName={PLAYERS.X}
+            isDisabled={true}
             symbol="X"
             isActive={activePlayer === 'X'}
             onChangeName={handlePlayerNameChange}

@@ -5,6 +5,7 @@ export default function Player({
   symbol,
   isActive,
   onChangeName,
+  isDisabled
 }) {
   const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
@@ -26,7 +27,7 @@ export default function Player({
 
   if (isEditing) {
     editablePlayerName = (
-      <input type="text" required value={playerName} onChange={handleChange} />
+      <input type="text" required disabled={isDisabled} value={playerName} onChange={handleChange} />
     );
     // btnCaption = 'Save';
   }
